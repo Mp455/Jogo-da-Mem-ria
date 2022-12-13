@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(rgb(19, 95, 95), rgb(12, 124, 124));
+}
+
+.icon{
+    width: 120px;
+}
+
+.card{
+    width: 120px;
+    height: 120px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition:transform .6s;
+    
+}
+
+.card-back, .card-front{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.50);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card-front{
+    background-color:rgb(29, 34, 29);
+    transform: rotateY(180deg);
+}
+
+
+.flip{
+    transform: rotateY(180deg);
+}
+
+.card-back{
+    color: rgb(19, 95, 95);
+    background-color: rgb(29, 34, 29);
+    font-size: 25px;
+}
+
+#gameOver{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+
+}
+
+#reiniciar{
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: yellow;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#gameBoard{
+   max-width: 700px; 
+   display: grid;
+   grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+   gap: 20px;
+   
+}
